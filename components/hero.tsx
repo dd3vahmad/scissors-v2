@@ -7,6 +7,7 @@ import UrlShortener from "./url-shortener";
 import QrcodeGenerator from "./qrcode-generator";
 import { LinkIcon, QrCodeIcon } from "@heroicons/react/16/solid";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { HeroInfo } from "./ui/ui";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("url");
@@ -16,7 +17,7 @@ const Hero = () => {
       className="w-screen min-h-screen flex flex-col gap-10 justify-center items-center bg-blue-950 text-white"
       style={{ backgroundImage: `url(${endlessConstellation.src})` }}
     >
-      <main className="md:px-[20%] flex flex-col gap-y-5">
+      <main className="md:px-[20%] flex flex-col gap-y-5 mt-15">
         <h3 className="text-5xl font-extrabold w-full text-center">
           Making the right digital connections
         </h3>
@@ -44,6 +45,7 @@ const Hero = () => {
           </TabsContent>
         </Tabs>
       </section>
+      <HeroInfo />
     </div>
   );
 };
