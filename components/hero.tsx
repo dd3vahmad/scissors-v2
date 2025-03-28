@@ -36,7 +36,7 @@ const Hero = () => {
               <QrCodeIcon /> Generate QR Code
             </TabsTrigger>
           </TabsList>
-          <TabsContent className="w-full border-2 border-white" value="url">
+          <TabsContent className="w-full" value="url">
             <UrlShortener />
           </TabsContent>
           <TabsContent value="qrcode">
