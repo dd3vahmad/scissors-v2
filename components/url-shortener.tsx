@@ -14,7 +14,7 @@ const UrlShortener = () => {
         <Label htmlFor="link" className="font-extrabold text-xl">
           Paste your long link here
         </Label>
-        <div className="flex flex-col w-full items-center space-x-2">
+        <div className="flex w-full items-center space-x-2">
           <Input
             name="link"
             style={{ height: "40px" }}
