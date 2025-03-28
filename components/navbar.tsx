@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between md:px-[20%] mx-auto bg-primary text-white py-5">
+    <div className="flex items-center justify-between md:px-[20%] mx-auto bg-transparent fixed w-full text-white py-5">
       <h2 className="text-2xl font-bold text-orange-500 cursor-pointer">
         Scissors
       </h2>
