@@ -1,17 +1,13 @@
 "use client";
 
 import { endlessConstellation } from "@/assets";
-import React, { useState } from "react";
-import { Button } from "./ui/button";
-import UrlShortener from "./url-shortener";
-import QrcodeGenerator from "./qrcode-generator";
+import React from "react";
+import { QrcodeGenerator, UrlShortener } from "./ui/ui";
 import { LinkIcon, QrCodeIcon } from "@heroicons/react/16/solid";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { HeroInfo } from "./ui/ui";
 
 const Hero = () => {
-  const [activeTab, setActiveTab] = useState("url");
-
   return (
     <div
       className="w-screen min-h-screen flex flex-col gap-10 justify-center items-center bg-blue-950 text-white"
