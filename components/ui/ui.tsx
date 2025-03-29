@@ -2,6 +2,18 @@ import { CheckIcon, QrCodeIcon } from "@heroicons/react/16/solid";
 import { Label } from "./label";
 import { Input } from "./input";
 import { Button } from "./button";
+import { ReactNode } from "react";
+import Image from "next/image";
+import { ArrowBigDown, ArrowBigUp } from "lucide-react";
+
+export interface IService {
+  title: string;
+  banner: string;
+  icon: ReactNode;
+  description: string;
+  verb: string;
+  features: string[];
+}
 
 export const HeroInfo = () => {
   return (
@@ -94,6 +106,68 @@ export const UrlShortener = () => {
             Shorten
           </Button>
         </div>
+      </section>
+    </div>
+  );
+};
+
+export const ServiceCard = ({ service }: { service: IService }) => {
+  return (
+    <div
+      style={{ scrollbarWidth: "none" }}
+      className="h-full flex-1 border rounded-3xl overflow-auto bg-slate-200"
+    >
+      <div className="w-full h-fit relative">
+        <Image
+          src={service.banner}
+          alt={service.title}
+          width={"400"}
+          height={"300"}
+          className="m-auto mb-10"
+        />
+        <div className="absolute top-5 z-10 text-white">{service.icon}</div>
+      </div>
+      <section className="w-full flex flex-col justify-between bg-white border-t rounded-t-3xl h-[90%] p-4">
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="w-[40px] border-2 rounded-lg">
+                {service.icon}
+              </span>
+              <h2 className="text-2xl font-bold">{service.title}</h2>
+            </div>
+            <ArrowBigUp
+              className="transform hover:rotate-180 duration-300"
+              size={"36px"}
+              cursor={"pointer"}
+            />
+            <ArrowBigDown
+              className="transform hover:rotate-180 duration-300 hidden"
+              size={"36px"}
+              cursor={"pointer"}
+            />
+          </div>
+          <p className="text-primary">{service.description}</p>
+        </div>
+        <ul className="space-y-3">
+          <h4 className="font-bold text-primary">
+            Popular {service.verb} Features
+          </h4>
+          {service.features.map((text, index) => (
+            <li key={index} className="flex items-center gap-2 text-primary">
+              <CheckIcon className="w-6 h-6 text-blue-800" />
+              <span>{text}</span>
+            </li>
+          ))}
+          <div className="w-full flex flex-col gap-3 mt-5">
+            <Button className="font-bold text-white bg-primary w-full">
+              Get started for free
+            </Button>
+            <Button className="border-2 border-primary bg-white text-primary font-bold">
+              Learn more
+            </Button>
+          </div>
+        </ul>
       </section>
     </div>
   );
