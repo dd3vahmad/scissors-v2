@@ -10,7 +10,7 @@ import { HeroInfo } from "./ui/ui";
 const Hero = () => {
   return (
     <div
-      className="w-screen min-h-screen flex flex-col gap-10 justify-center items-center bg-blue-950 text-white"
+      className="w-screen min-h-screen flex flex-col gap-10 justify-center items-center bg-primary text-white"
       style={{ backgroundImage: `url(${endlessConstellation.src})` }}
     >
       <main className="md:px-[20%] flex flex-col gap-y-5 mt-15">
