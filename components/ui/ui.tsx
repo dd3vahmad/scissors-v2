@@ -19,6 +19,22 @@ export interface IService {
   features: string[];
 }
 
+interface GlassmorphismProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export const Glassmorphism: React.FC<GlassmorphismProps> = ({
+  children,
+  className = "",
+}) => {
+  return (
+    <div className={`backdrop-blur-sm bg-white/4 shadow-lg ${className}`}>
+      {children}
+    </div>
+  );
+};
+
 export const HeroInfo = () => {
   return (
     <div className="w-full flex flex-col gap-5 md:px-[20%] mt-5 items-center">
