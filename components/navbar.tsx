@@ -25,7 +25,9 @@ const Navbar = () => {
   return (
     <header
       className={`flex items-center justify-between md:px-[20%] mx-auto fixed w-full transition-all duration-300 ${
-        scrolled ? "bg-white/10 backdrop-blur-md shadow-md" : "bg-transparent"
+        scrolled
+          ? "bg-white/10 backdrop-blur-md shadow-md z-20"
+          : "bg-transparent"
       } text-white py-5`}
     >
       <Logo />
