@@ -1,10 +1,14 @@
+"use client";
+
 import { CheckIcon, QrCodeIcon } from "@heroicons/react/16/solid";
 import { Label } from "./label";
 import { Input } from "./input";
 import { Button } from "./button";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import Image from "next/image";
 import { ArrowBigUp } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export interface IService {
   title: string;
@@ -44,8 +48,18 @@ export const Logo = () => {
 };
 
 export const QrcodeGenerator = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="max-w-[800px] h-[320px] mx-auto grid grid-cols-6 justify-between p-10 bg-white text-primary rounded-2xl">
+    <div
+      data-aos="zoom-in"
+      className="max-w-[800px] h-[320px] mx-auto grid grid-cols-6 justify-between p-10 bg-white text-primary rounded-2xl"
+    >
       <section className="flex flex-col justify-between pe-10 col-span-4">
         <section className="w-full">
           <h4 className="text-3xl font-extrabold">Create a QR Code</h4>
@@ -81,8 +95,18 @@ export const QrcodeGenerator = () => {
 };
 
 export const UrlShortener = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="max-w-[800px] h-[320px] mx-auto flex flex-col justify-between p-10 bg-white text-primary rounded-2xl">
+    <div
+      data-aos="zoom-in"
+      className="max-w-[800px] h-[320px] mx-auto flex flex-col justify-between p-10 bg-white text-primary rounded-2xl"
+    >
       <section className="w-full">
         <h4 className="text-3xl font-extrabold">Shorten a long link</h4>
         <h6>No credit card required.</h6>
