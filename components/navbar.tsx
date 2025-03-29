@@ -1,13 +1,36 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Logo } from "./ui/ui";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
   return (
-    <div className="flex items-center justify-between md:px-[20%] mx-auto bg-transparent fixed w-full text-white py-5">
+    <header
+      className={`flex items-center justify-between md:px-[20%] mx-auto fixed w-full transition-all duration-300 ${
+        scrolled ? "bg-white/10 backdrop-blur-md shadow-md" : "bg-transparent"
+      } text-white py-5`}
+    >
       <Logo />
 
-      <ul className="list-none flex font-semibold text-md items-center gap-4">
+      <ul className="list-none flex font-semibold text-md items-center gap-5">
         <li className="cursor-pointer">URL Shortener</li>
         <li className="cursor-pointer">QR Code Generator</li>
         <li className="cursor-pointer">Pages</li>
@@ -21,7 +44,7 @@ const Navbar = () => {
           Sign Up For FREE
         </Button>
       </span>
-    </div>
+    </header>
   );
 };
 
