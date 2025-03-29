@@ -4,7 +4,7 @@ import { Input } from "./input";
 import { Button } from "./button";
 import { ReactNode } from "react";
 import Image from "next/image";
-import { ArrowBigDown, ArrowBigUp } from "lucide-react";
+import { ArrowBigUp } from "lucide-react";
 
 export interface IService {
   title: string;
@@ -115,7 +115,7 @@ export const ServiceCard = ({ service }: { service: IService }) => {
   return (
     <div
       style={{ scrollbarWidth: "none" }}
-      className="h-full flex-1 border rounded-3xl overflow-auto bg-slate-200"
+      className="h-full flex-1 border relative rounded-3xl overflow-auto bg-slate-200 group"
     >
       <div className="w-full h-fit relative">
         <Image
@@ -127,7 +127,7 @@ export const ServiceCard = ({ service }: { service: IService }) => {
         />
         <div className="absolute top-5 z-10 text-white">{service.icon}</div>
       </div>
-      <section className="w-full flex flex-col justify-between bg-white border-t rounded-t-3xl h-[90%] p-4">
+      <section className="w-full absolute flex flex-col justify-between bg-white border-t rounded-t-3xl h-[90%] px-4 py-5 transition-all duration-300 group-hover:-translate-y-82">
         <div className="flex flex-col gap-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -137,12 +137,7 @@ export const ServiceCard = ({ service }: { service: IService }) => {
               <h2 className="text-2xl font-bold">{service.title}</h2>
             </div>
             <ArrowBigUp
-              className="transform hover:rotate-180 duration-300"
-              size={"36px"}
-              cursor={"pointer"}
-            />
-            <ArrowBigDown
-              className="transform hover:rotate-180 duration-300 hidden"
+              className="transform transition-all duration-300 group-hover:rotate-180"
               size={"36px"}
               cursor={"pointer"}
             />
@@ -160,10 +155,10 @@ export const ServiceCard = ({ service }: { service: IService }) => {
             </li>
           ))}
           <div className="w-full flex flex-col gap-3 mt-5">
-            <Button className="font-bold text-white bg-primary w-full">
+            <Button className="font-bold cursor-pointer text-white bg-primary w-full">
               Get started for free
             </Button>
-            <Button className="border-2 border-primary bg-white text-primary font-bold">
+            <Button className="border-2 cursor-pointer hover:bg-white border-primary bg-white text-primary font-bold">
               Learn more
             </Button>
           </div>

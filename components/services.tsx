@@ -75,7 +75,7 @@ const Services = () => {
         Get started for free <ArrowRightIcon />
       </Button>
 
-      <div className="flex w-full h-[600px] gap-10">
+      <div className="flex w-full h-[570px] gap-10">
         {services.map((service, i) => (
           <ServiceCard key={i} service={service} />
         ))}
