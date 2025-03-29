@@ -105,7 +105,7 @@ const Testimonials = () => {
                           When it comes to deciding on a platform to use for
                           generating all of our QR Codes, there was a general
                           consensus among the team—of course we should use
-                          Scissors! We didn't even give it a second thought.
+                          ScSly! We didn't even give it a second thought.
                         </p>
                       </div>
 

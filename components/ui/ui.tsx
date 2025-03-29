@@ -58,7 +58,7 @@ export const HeroInfo = () => {
 export const Logo = () => {
   return (
     <h2 className="text-2xl italic font-bold text-primary [text-shadow:_2px_2px_0px_white,_-2px_2px_0px_white,_2px_-2px_0px_white,_-2px_-2px_0px_white]">
-      ScS
+      ScSly
     </h2>
   );
 };

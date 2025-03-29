@@ -44,7 +44,7 @@ const Services = () => {
       banner: endlessConstellation.src,
       icon: <DocumentTextIcon />,
       description:
-        "Scissors Pages helps you create engaging, mobile-optimized landing pages in minutes.",
+        "ScSly Pages helps you create engaging, mobile-optimized landing pages in minutes.",
       features: [
         "Custom URLs for social media",
         "Customizable landing page",
@@ -61,7 +61,7 @@ const Services = () => {
         Great Connections Start with a click OR SCAN
       </h3>
       <h2 className="text-5xl font-extrabold text-primary mb-3">
-        Scissors Connections Platform
+        ScSly Connections Platform
       </h2>
       <p className="text-xl text-center w-full md:px-[10%] mt-4">
         All the products you need to build brand connections, manage links and

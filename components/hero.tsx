@@ -20,7 +20,7 @@ const Hero = () => {
         <p className="text-2xl font-semibold w-full text-center">
           Use our URL shortener, QR Codes, and landing pages to engage your
           audience and connect them to the right information. Build, edit, and
-          track everything inside the Scissors Platform.
+          track everything inside the ScSly Platform.
         </p>
       </main>
       <section className="flex flex-col w-full items-center mt-6 gap-y-6 px-[20%]">
