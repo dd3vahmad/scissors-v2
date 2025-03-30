@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`flex items-center justify-between md:px-[20%] mx-auto fixed w-full transition-all duration-300 ${
+      className={`flex items-center justify-between px-4 md:px-[20%] mx-auto fixed w-full transition-all duration-300 ${
         scrolled
           ? "bg-white/10 backdrop-blur-md shadow-md z-20"
           : "bg-transparent"
@@ -32,13 +32,13 @@ const Navbar = () => {
     >
       <Logo />
 
-      <ul className="list-none flex font-semibold text-md items-center gap-5">
+      <ul className="list-none hidden md:flex font-semibold text-md items-center gap-5">
         <li className="cursor-pointer">URL Shortener</li>
         <li className="cursor-pointer">QR Code Generator</li>
         <li className="cursor-pointer">Pages</li>
         <li className="cursor-pointer">Analytics</li>
       </ul>
-      <span className="flex items-center gap-3">
+      <span className="hidden md:flex items-center gap-3">
         <Button className="border-white border-2 bg-none cursor-pointer">
           Log In
         </Button>

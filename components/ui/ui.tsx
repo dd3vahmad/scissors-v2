@@ -38,15 +38,15 @@ export const Glassmorphism: React.FC<GlassmorphismProps> = ({
 export const HeroInfo = () => {
   return (
     <div className="w-full flex flex-col gap-5 md:px-[20%] mt-5 items-center">
-      <h2 className="font-bold text-xl">
+      <h2 className="font-bold md:text-xl">
         Sign up for free. Enjoy limitless connections.
       </h2>
-      <ul className="flex space-x-6">
+      <ul className="flex flex-col md:flex-row gap-y-2 mb-3 md:mb-0 md:space-x-6">
         {["short links", "custom back-halves", "QR code generations"].map(
           (text, index) => (
             <li key={index} className="flex items-center gap-2">
               <CheckIcon className="w-6 h-6 text-blue-800" />
-              <span>{`Unlimited ${text}`}</span>
+              <span className="text-sm md:text-lg text-nowrap">{`Unlimited ${text}`}</span>
             </li>
           )
         )}
@@ -74,16 +74,21 @@ export const QrcodeGenerator = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="max-w-[800px] h-[320px] mx-auto grid grid-cols-6 justify-between p-10 bg-white text-primary rounded-2xl"
+      className="max-w-[800px] h-[240px] md:h-[320px] mx-auto md:grid grid-cols-6 justify-between p-5 md:p-10 bg-white text-primary rounded-2xl"
     >
-      <section className="flex flex-col justify-between pe-10 col-span-4">
+      <section className="flex flex-col h-full md:h-fit justify-between md:pe-10 col-span-4">
         <section className="w-full">
-          <h4 className="text-3xl font-extrabold">Create a QR Code</h4>
+          <h4 className="text-xl md:text-3xl font-extrabold">
+            Create a QR Code
+          </h4>
           <h6>No credit card required.</h6>
         </section>
         <section className="grid w-full items-center gap-1.5">
-          <Label htmlFor="link" className="font-extrabold text-lg">
-            Enter your QR Code destination
+          <Label
+            htmlFor="link"
+            className="font-semibold md:font-extrabold md:text-lg"
+          >
+            Enter your QR code destination
           </Label>
           <div className="flex flex-col gap-y-3 w-full">
             <Input
@@ -94,7 +99,7 @@ export const QrcodeGenerator = () => {
             />
             <Button
               size={"lg"}
-              className="cursor-pointer text-lg font-bold w-fit"
+              className="cursor-pointer text-lg font-bold w-full md:w-fit"
               type="submit"
             >
               Generate QR Code
@@ -103,7 +108,7 @@ export const QrcodeGenerator = () => {
         </section>
       </section>
 
-      <section className="h-full border rounded-2xl min-w-[240px]">
+      <section className="h-full border hidden md:block rounded-2xl min-w-[240px]">
         <QrCodeIcon />
       </section>
     </div>
@@ -121,17 +126,22 @@ export const UrlShortener = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="max-w-[800px] h-[320px] mx-auto flex flex-col justify-between p-10 bg-white text-primary rounded-2xl"
+      className="max-w-[800px] h-[240px] md:h-[320px] mx-auto flex flex-col justify-between p-5 md:p-10 bg-white text-primary rounded-2xl"
     >
       <section className="w-full">
-        <h4 className="text-3xl font-extrabold">Shorten a long link</h4>
+        <h4 className="text-xl md:text-3xl font-extrabold">
+          Shorten a long link
+        </h4>
         <h6>No credit card required.</h6>
       </section>
       <section className="grid w-full items-center gap-1.5">
-        <Label htmlFor="link" className="font-extrabold text-xl">
+        <Label
+          htmlFor="link"
+          className="font-semibold md:font-extrabold md:text-xl"
+        >
           Paste your long link here
         </Label>
-        <div className="flex w-full items-center space-x-2">
+        <div className="flex flex-col md:flex-row w-full items-center space-x-2">
           <Input
             name="link"
             style={{ height: "40px" }}
@@ -140,7 +150,7 @@ export const UrlShortener = () => {
           />
           <Button
             size={"lg"}
-            className="cursor-pointer text-lg font-bold"
+            className="cursor-pointer text-lg w-full md:w-fit font-bold mt-2 md:mt-0"
             type="submit"
           >
             Shorten

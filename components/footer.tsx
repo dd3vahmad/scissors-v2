@@ -1,112 +1,46 @@
 import { endlessConstellation } from "@/assets";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MessageCircle,
-  Twitter,
-} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
     <div
-      className="w-screen flex flex-col gap-10 justify-center items-center bg-primary text-white"
+      className="w-screen flex flex-col gap-10 justify-center items-center bg-primary py-12 text-white"
       style={{ backgroundImage: `url(${endlessConstellation.src})` }}
     >
-      <div className="flex flex-col md:flex-row md:w-[60vw] mx-auto p-3 md:py-3 md:px-0 justify-center gap-8 md:gap-30">
+      <div className="flex flex-col md:flex-row md:w-[50%] mx-auto p-3 md:py-3 md:px-0 justify-between gap-8 md:gap-30">
         <div className="flex flex-col gap-2">
-          <h3 className="mb-3 font-semibold text-primary text-lg">
-            Quick Links
-          </h3>
+          <h3 className="font-bold text-white text-lg">Products</h3>
           <div className="flex flex-col md:flex-row gap-10 text-sm">
-            <ul className="flex flex-col gap-5">
+            <ul className="flex gap-5 font-semibold text-nowrap">
               <li className="cursor-pointer">
-                <Link href={"#home"}>Home</Link>
+                <Link href={"/url-shortener"}>Url Shortener</Link>
               </li>
               <li className="cursor-pointer">
-                <Link href={"#about"}>About Me</Link>
+                <Link href={"/about"}>QR Code Generator</Link>
               </li>
               <li className="cursor-pointer">
-                <Link href={"#services"}>Services</Link>
-              </li>
-            </ul>
-            <ul className="flex flex-col gap-5">
-              <li className="cursor-pointer">
-                <Link href={"#testimonials"}>Testimonials</Link>
+                <Link href={"/pages"}>Pages</Link>
               </li>
               <li className="cursor-pointer">
-                <Link href={"#resources"}>Resources</Link>
-              </li>
-              <li className="cursor-pointer">
-                <Link href={"#contact"}>Work with Hamdallah</Link>
+                <Link href={"/analytics"}>Analytics</Link>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="mb-3 font-semibold text-primary text-lg">Legal</h3>
+          <h3 className="font-bold text-white text-lg">Company</h3>
 
-          <ul className="flex flex-col gap-5 text-sm">
-            <li className="cursor-pointer">
-              <Link href={"policy"}>Policy</Link>
-            </li>
-            <li className="cursor-pointer">
-              <Link target="_blank" href={"https://wa.link/dlzmz3"}>
-                Complaint Handling
+          <ul className="flex gap-5 text-sm">
+            <li className="cursor-pointer font-semibold">
+              <Link target="_blank" href={"/about"}>
+                About ScSly
               </Link>
             </li>
-            <li className="cursor-pointer">
-              <Link href={"terms"}>Terms and Conditions</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="mb-3 font-semibold text-primary text-lg">Contact</h3>
-
-          <ul className="flex flex-col gap-5 text-sm">
-            <li className="cursor-pointer flex items-center gap-2">
-              <Mail size={"20px"} className="text-primary" />{" "}
-              <Link
-                target="_blank"
-                href={"mailto:officialhamdallah01@gmail.com"}
-              >
-                officialhamdallah01@gmail.com
-              </Link>
-            </li>
-            <li className="cursor-pointer flex items-center gap-2">
-              <MessageCircle size={"20px"} className="text-primary" />
-              <Link target="_blank" href={"https://wa.link/dlzmz3"}>
-                Chat on Whatsapp
-              </Link>
-            </li>
-            <li className="flex gap-4 items-center">
-              <Link
-                target="_blank"
-                href={"https://www.linkedin.com/in/rabiu-hamdallah-0a3b2823a"}
-              >
-                <Linkedin className="text-primary cursor-pointer hover:opacity-70" />
-              </Link>
-              <Link target="_blank" href={"https://www.x.com/RabiuHamdallah"}>
-                <Twitter className="text-primary cursor-pointer hover:opacity-70" />
-              </Link>
-              <Link
-                target="_blank"
-                href={"https://www.linkedin.com/in/rabiu-hamdallah-0a3b2823a"}
-              >
-                <Instagram className="text-primary cursor-pointer hover:opacity-70" />
-              </Link>
-              <Link
-                target="_blank"
-                href={
-                  "https://www.facebook.com.com/profile.php?id=100079752733427"
-                }
-              >
-                <Facebook className="text-primary cursor-pointer hover:opacity-70" />
+            <li className="cursor-pointer font-semibold">
+              <Link target="_blank" href={"https://www.theahmad.me"}>
+                About Creator
               </Link>
             </li>
           </ul>
