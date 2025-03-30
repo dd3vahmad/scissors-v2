@@ -44,7 +44,7 @@ const Testimonials = () => {
 
   return (
     <div className="w-full bg-primary flex flex-col items-center md:px-[20%] text-white py-20 relative">
-      <h2 className="text-5xl text-center font-extrabold px-24 mb-16 w-fit">
+      <h2 className="text-3xl md:text-5xl text-center font-extrabold px-5 md:px-24 mb-5 md:mb-16 w-fit">
         What our customers are saying
       </h2>
       <div className="md:w-fit w-[84vw] mx-auto font-[family-name:var(--font-geist-sans)]">
