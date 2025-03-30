@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-white text-lg">Products</h3>
           <div className="flex flex-col md:flex-row gap-10 text-sm">
-            <ul className="flex gap-5 font-semibold text-nowrap">
+            <ul className="flex flex-wrap gap-5 font-semibold text-nowrap">
               <li className="cursor-pointer">
                 <Link href={"/url-shortener"}>Url Shortener</Link>
               </li>
