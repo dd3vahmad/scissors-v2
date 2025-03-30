@@ -27,12 +27,12 @@ const Counts = () => {
   ];
 
   return (
-    <div className="bg-white md:px-[20%] flex flex-col justify-center items-center py-20">
-      <h2 className="text-5xl text-primary text-center font-extrabold px-24 w-fit">
+    <div className="bg-white md:px-[20%] flex flex-col justify-center items-center py-12 md:py-20">
+      <h2 className="text-2xl md:text-5xl text-primary text-center font-extrabold px-5 md:px-24 w-fit">
         Adopted and loved by millions of users for over a decade
       </h2>
 
-      <div className="flex justify-center gap-10 mx-auto mt-12 w-full">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 mx-auto mt-12 w-full">
         {counts.map((count, i) => (
           <div
             key={i}
