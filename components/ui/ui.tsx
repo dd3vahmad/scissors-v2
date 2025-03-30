@@ -37,7 +37,7 @@ export const Glassmorphism: React.FC<GlassmorphismProps> = ({
 
 export const HeroInfo = () => {
   return (
-    <div className="w-full flex flex-col gap-5 md:px-[20%] mt-5 items-center">
+    <div className="w-full flex flex-col gap-5 md:px-[20%] my-5 md:mb-0 items-center">
       <h2 className="font-bold md:text-xl">
         Sign up for free. Enjoy limitless connections.
       </h2>
@@ -165,7 +165,7 @@ export const ServiceCard = ({ service }: { service: IService }) => {
   return (
     <div
       style={{ scrollbarWidth: "none" }}
-      className="h-full flex-1 border relative rounded-3xl overflow-auto bg-slate-200 group"
+      className="min-h-[570px] md:h-full md:flex-1 border relative rounded-3xl overflow-auto bg-slate-200 group"
     >
       <div className="w-full h-fit relative">
         <Image

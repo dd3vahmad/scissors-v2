@@ -56,14 +56,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-slate-100 py-20 flex flex-col items-center justify-center md:px-[20%]">
-      <h3 className="text-2xl text-slate-800 uppercase mb-8">
+    <div className="bg-slate-100 py-10 md:py-20 flex flex-col items-center justify-center md:px-[20%]">
+      <h3 className="text-lg md:text-2xl text-center px-5 md:px-0 text-slate-800 uppercase mb-8">
         Great Connections Start with a click OR SCAN
       </h3>
-      <h2 className="text-5xl font-extrabold text-primary mb-3">
+      <h2 className="text-2xl md:text-5xl font-extrabold text-primary mb-3">
         ScSly Connections Platform
       </h2>
-      <p className="text-xl text-center w-full md:px-[10%] mt-4">
+      <p className="md:text-xl text-center w-full px-5 md:px-[10%] md:mt-4">
         All the products you need to build brand connections, manage links and
         QR Codes, and connect with audiences everywhere, in a single unified
         platform.
@@ -75,7 +75,7 @@ const Services = () => {
         Get started for free <ArrowRightIcon />
       </Button>
 
-      <div className="flex w-full h-[570px] gap-10">
+      <div className="flex flex-col md:flex-row w-full h-fit md:h-[570px] px-5 md:px-0 gap-6 md:gap-10">
         {services.map((service, i) => (
           <ServiceCard key={i} service={service} />
         ))}
